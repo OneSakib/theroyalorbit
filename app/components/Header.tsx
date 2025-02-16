@@ -4,14 +4,14 @@ import { useEffect } from "react";
 
 const Header = () => {
     useEffect(() => {
-        document.querySelectorAll(".navmenu .toggle-dropdown").forEach((navmenu) => {
-            navmenu.addEventListener("click", function (e) {
-                e.preventDefault();
-                this.parentNode.classList.toggle("active");
-                this.parentNode.nextElementSibling.classList.toggle("dropdown-active");
-                e.stopImmediatePropagation();
-            });
-        });
+        // document.querySelectorAll(".navmenu .toggle-dropdown").forEach((navmenu) => {
+        //     navmenu.addEventListener("click", function (e) {
+        //         e.preventDefault();
+        //         this.parentNode.classList.toggle("active");
+        //         this.parentNode.nextElementSibling.classList.toggle("dropdown-active");
+        //         e.stopImmediatePropagation();
+        //     });
+        // });
     }, [])
     return <header id="header" className="header d-flex align-items-center fixed-top">
         <div className="container-fluid container-xl position-relative d-flex align-items-center">
