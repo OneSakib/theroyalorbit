@@ -1,6 +1,7 @@
 'use client';
 import { useEffect } from "react";
 import Swiper from "swiper";
+import Link from "next/link";
 const Loader = () => {
     useEffect(() => {
         const preloader = document.querySelector("#preloader");
@@ -215,13 +216,13 @@ const Loader = () => {
 
     }, [])
     return <div>
-        <a
+        <Link
             href="#"
             id="scroll-top"
             className="scroll-top d-flex align-items-center justify-content-center"
         >
             <i className="bi bi-arrow-up-short">
-            </i></a>        <div id="preloader"></div>
+            </i></Link>        <div id="preloader"></div>
     </div>
 }
 export default Loader;
