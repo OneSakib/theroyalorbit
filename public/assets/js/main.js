@@ -9,25 +9,6 @@
 (function () {
   "use strict";
 
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
-   */
-  function toggleScrolled() {
-    const selectBody = document.querySelector("body");
-    const selectHeader = document.querySelector("#header");
-    if (
-      !selectHeader.classList.contains("scroll-up-sticky") &&
-      !selectHeader.classList.contains("sticky-top") &&
-      !selectHeader.classList.contains("fixed-top")
-    )
-      return;
-    window.scrollY > 100
-      ? selectBody.classList.add("scrolled")
-      : selectBody.classList.remove("scrolled");
-  }
-
-  document.addEventListener("scroll", toggleScrolled);
-  window.addEventListener("load", toggleScrolled);
 
     /**
      * Mobile nav toggle
@@ -131,33 +112,8 @@
 
   window.addEventListener("load", initSwiper);
 
-  /**
-   * Frequently Asked Questions Toggle
-   */
-  document
-    .querySelectorAll(".faq-item h3, .faq-item .faq-toggle")
-    .forEach((faqItem) => {
-      faqItem.addEventListener("click", () => {
-        faqItem.parentNode.classList.toggle("faq-active");
-      });
-    });
+ 
 
-  /**
-   * Animate the skills items on reveal
-   */
-  let skillsAnimation = document.querySelectorAll(".skills-animation");
-  skillsAnimation.forEach((item) => {
-    new Waypoint({
-      element: item,
-      offset: "80%",
-      handler: function (direction) {
-        let progress = item.querySelectorAll(".progress .progress-bar");
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute("aria-valuenow") + "%";
-        });
-      },
-    });
-  });
 
   /**
    * Init isotope layout and filters
