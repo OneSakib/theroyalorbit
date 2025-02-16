@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import Swiper from "swiper";
+import Image from "next/image";
 const ClientSection = () => {
     useEffect(() => {
         function aosInit() {
@@ -51,66 +52,66 @@ const ClientSection = () => {
             });
         }
 
-        initSwiper
+        initSwiper();
     }, [])
     return <section id="clients" className="clients section light-background">
         <div className="container" data-aos="zoom-in">
             <div className="swiper init-swiper">
                 <div className="swiper-wrapper align-items-center">
                     <div className="swiper-slide">
-                        <img
-                            src="assets/img/clients/client-1.png"
+                        <Image width={100} height={100}
+                            src="/assets/img/clients/client-1.png"
                             className="img-fluid"
-                            alt=""
+                            alt="load iamge"
                         />
                     </div>
                     <div className="swiper-slide">
-                        <img
-                            src="assets/img/clients/client-2.png"
+                        <Image width={100} height={100}
+                            src="/assets/img/clients/client-2.png"
                             className="img-fluid"
-                            alt=""
+                            alt="load iamge"
                         />
                     </div>
                     <div className="swiper-slide">
-                        <img
-                            src="assets/img/clients/client-3.png"
+                        <Image width={100} height={100}
+                            src="/assets/img/clients/client-3.png"
                             className="img-fluid"
-                            alt=""
+                            alt="load iamge"
                         />
                     </div>
                     <div className="swiper-slide">
-                        <img
-                            src="assets/img/clients/client-4.png"
+                        <Image width={100} height={100}
+                            src="/assets/img/clients/client-4.png"
                             className="img-fluid"
-                            alt=""
+                            alt="load iamge"
                         />
                     </div>
                     <div className="swiper-slide">
-                        <img
-                            src="assets/img/clients/client-5.png"
+                        <Image width={100} height={100}
+                            src="/assets/img/clients/client-5.png"
                             className="img-fluid"
-                            alt=""
+                            alt="load iamge"
                         />
                     </div>
                     <div className="swiper-slide">
-                        <img
-                            src="assets/img/clients/client-6.png"
+                        <Image width={100} height={100}
+                            src="/assets/img/clients/client-6.png"
                             className="img-fluid"
-                            alt=""
+                            alt="load iamge"
                         />
                     </div>
                     <div className="swiper-slide">
-                        <img
-                            src="assets/img/clients/client-7.png"
+                        <Image width={100} height={100}
+                            src="/assets/img/clients/client-7.png"
                             className="img-fluid"
-                            alt=""
+                            alt="load iamge"
                         />
                     </div>
                     <div className="swiper-slide">
-                        <img
-                            src="assets/img/clients/client-8.png"
+                        <Image width={100} height={100}
+                            src="/assets/img/clients/client-8.png"
                             className="img-fluid"
-                            alt=""
+                            alt="load iamge"
                         />
                     </div>
                 </div>

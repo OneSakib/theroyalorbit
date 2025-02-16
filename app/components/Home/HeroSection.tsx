@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import GLightbox from "glightbox";
+import Image from "next/image";
 const HeroSection = () => {
     useEffect(() => {
         function aosInit() {
@@ -16,7 +17,7 @@ const HeroSection = () => {
         /**
  * Initiate glightbox
  */
-        const glightbox = GLightbox({
+        GLightbox({
             selector: ".glightbox",
         });
     }, [])
@@ -33,7 +34,7 @@ const HeroSection = () => {
                         </div>
                     </div>
                     <div className="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                        <img src="/assets/img/hero-img.jpg" className="img-fluid animated" alt="" />
+                        <Image src="/assets/img/hero-img.jpg" width={600} height={100} className="img-fluid animated" alt="Hero Image" />
                     </div>
                 </div>
             </div>
