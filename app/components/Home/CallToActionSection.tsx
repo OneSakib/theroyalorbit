@@ -18,7 +18,7 @@ const CallToActionSection = () => {
         id="call-to-action"
         className="call-to-action section dark-background"
     >
-        <Image src="/assets/img/cta-bg.jpg" fill alt="sdgdfg" />
+        <Image src="/assets/img/image-2.jpg" fill alt="sdgdfg" />
 
         <div className="container">
             <div className="row" data-aos="zoom-in" data-aos-delay="100">

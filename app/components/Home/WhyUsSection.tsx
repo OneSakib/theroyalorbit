@@ -83,7 +83,7 @@ const WhyUsSection = () => {
                     {/* Image Section */}
                     <div className="col-lg-5 order-1 order-lg-2 why-us-img">
                         <Image
-                            src="/assets/img/why-us.png"
+                            src="/assets/img/image-2.jpg"
                             className="img-fluid"
                             alt="Why Us"
                             width={500}

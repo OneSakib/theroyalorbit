@@ -22,7 +22,7 @@ const SkillsSection = () => {
             <div className="container" data-aos="fade-up" data-aos-delay="100">
                 <div className="row">
                     <div className="col-lg-6 d-flex align-items-center">
-                        <Image src="/assets/img/skills.png" className="img-fluid" alt="Skills" width={500} height={500} />
+                        <Image src="/assets/img/image-2.jpg" className="img-fluid" alt="Skills" width={500} height={500} />
                     </div>
 
                     <div className="col-lg-6 pt-4 pt-lg-0 content">

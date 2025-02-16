@@ -2,33 +2,54 @@
 
 import { useEffect, useRef } from "react";
 import AOS from "aos";
+import { LayoutModes } from "isotope-layout";
+import imagesLoaded from "imagesloaded";
 import Image from "next/image";
 
 const PortfolioSection: React.FC = () => {
     const portfolioRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        if (typeof window === "undefined") return; // Ensure code runs only on the client
-
-        import("isotope-layout").then((IsotopeModule) => {
-            const Isotope = IsotopeModule.default; // Get the Isotope constructor
-
-            AOS.init({
-                duration: 600,
-                easing: "ease-in-out",
-                once: true,
-                mirror: false,
-            });
-
-            const portfolioContainer = portfolioRef.current;
-            if (portfolioContainer) {
-                new Isotope(portfolioContainer, {
-                    itemSelector: ".portfolio-item",
-                    layoutMode: "fitRows",
-                });
-            }
+        AOS.init({
+            duration: 600,
+            easing: "ease-in-out",
+            once: true,
+            mirror: false,
         });
+        if (typeof window !== "undefined") {
+            import("isotope-layout").then((module) => {
+                const Isotope = module.default;
+                const isotopeContainers = portfolioRef.current?.querySelectorAll(".isotope-layout");
 
+                isotopeContainers?.forEach((isotopeItem) => {
+                    const layout = isotopeItem.getAttribute("data-layout") as LayoutModes | undefined;
+                    const filter = isotopeItem.getAttribute("data-default-filter") || "*";
+                    const sort = isotopeItem.getAttribute("data-sort") || "original-order";
+
+                    const container: HTMLElement | null = isotopeItem.querySelector(".isotope-container");
+
+                    if (!container) return; // Prevent passing null to imagesLoaded
+
+                    imagesLoaded(container, () => {
+                        const initIsotope = new Isotope(container, {
+                            itemSelector: ".isotope-item",
+                            layoutMode: layout,
+                            filter: filter,
+                            sortBy: sort,
+                        });
+
+                        isotopeItem.querySelectorAll<HTMLLIElement>(".isotope-filters li").forEach((filterItem) => {
+                            filterItem.addEventListener("click", () => {
+                                isotopeItem.querySelector(".isotope-filters .filter-active")?.classList.remove("filter-active");
+                                filterItem.classList.add("filter-active");
+                                initIsotope.arrange({ filter: filterItem.getAttribute("data-filter")! });
+                                AOS.refresh();
+                            });
+                        });
+                    });
+                });
+            })
+        }
     }, []);
 
     return (
@@ -71,15 +92,15 @@ const PortfolioSection: React.FC = () => {
 };
 
 const portfolioItems = [
-    { title: "App 1", description: "Lorem ipsum, dolor sit", imgSrc: "/assets/img/masonry-portfolio/masonry-portfolio-1.jpg", filter: "filter-app", category: "app" },
-    { title: "Product 1", description: "Lorem ipsum, dolor sit", imgSrc: "/assets/img/masonry-portfolio/masonry-portfolio-2.jpg", filter: "filter-product", category: "product" },
-    { title: "Branding 1", description: "Lorem ipsum, dolor sit", imgSrc: "/assets/img/masonry-portfolio/masonry-portfolio-3.jpg", filter: "filter-branding", category: "branding" },
-    { title: "App 2", description: "Lorem ipsum, dolor sit", imgSrc: "/assets/img/masonry-portfolio/masonry-portfolio-4.jpg", filter: "filter-app", category: "app" },
-    { title: "Product 2", description: "Lorem ipsum, dolor sit", imgSrc: "/assets/img/masonry-portfolio/masonry-portfolio-5.jpg", filter: "filter-product", category: "product" },
-    { title: "Branding 2", description: "Lorem ipsum, dolor sit", imgSrc: "/assets/img/masonry-portfolio/masonry-portfolio-6.jpg", filter: "filter-branding", category: "branding" },
-    { title: "App 3", description: "Lorem ipsum, dolor sit", imgSrc: "/assets/img/masonry-portfolio/masonry-portfolio-7.jpg", filter: "filter-app", category: "app" },
-    { title: "Product 3", description: "Lorem ipsum, dolor sit", imgSrc: "/assets/img/masonry-portfolio/masonry-portfolio-8.jpg", filter: "filter-product", category: "product" },
-    { title: "Branding 3", description: "Lorem ipsum, dolor sit", imgSrc: "/assets/img/masonry-portfolio/masonry-portfolio-9.jpg", filter: "filter-branding", category: "branding" },
+    { title: "App 1", description: "Lorem ipsum, dolor sit", imgSrc: "/assets/img/image-2.jpg", filter: "filter-app", category: "app" },
+    { title: "Product 1", description: "Lorem ipsum, dolor sit", imgSrc: "/assets/img/image-3.jpg", filter: "filter-product", category: "product" },
+    { title: "Branding 1", description: "Lorem ipsum, dolor sit", imgSrc: "/assets/img/image-4.jpg", filter: "filter-branding", category: "branding" },
+    { title: "App 2", description: "Lorem ipsum, dolor sit", imgSrc: "/assets/img/image-5.jpg", filter: "filter-app", category: "app" },
+    { title: "Product 2", description: "Lorem ipsum, dolor sit", imgSrc: "/assets/img/image-6.jpg", filter: "filter-product", category: "product" },
+    { title: "Branding 2", description: "Lorem ipsum, dolor sit", imgSrc: "/assets/img/image-7.jpg", filter: "filter-branding", category: "branding" },
+    { title: "App 3", description: "Lorem ipsum, dolor sit", imgSrc: "/assets/img/image-8.jpg", filter: "filter-app", category: "app" },
+    { title: "Product 3", description: "Lorem ipsum, dolor sit", imgSrc: "/assets/img/image-9.jpg", filter: "filter-product", category: "product" },
+    { title: "Branding 3", description: "Lorem ipsum, dolor sit", imgSrc: "/assets/img/image-9.jpg", filter: "filter-branding", category: "branding" },
 ];
 
 export default PortfolioSection;

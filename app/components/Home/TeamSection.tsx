@@ -15,7 +15,7 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
     {
-        name: "Walter White",
+        name: "Ankush Tyagi",
         role: "Chief Executive Officer",
         description: "Explicabo voluptatem mollitia et repellat qui dolorum quasi",
         imgSrc: "/assets/img/team/team-1.jpg",

@@ -38,7 +38,7 @@ const HeroSection = () => {
                         </div>
                     </div>
                     <div className="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                        <Image src="/assets/img/hero-img.jpg" width={600} height={100} className="img-fluid animated" alt="Hero Image" />
+                        <Image src="/assets/img/image-2.jpg" width={600} height={100} className="img-fluid animated" alt="Hero Image" />
                     </div>
                 </div>
             </div>
