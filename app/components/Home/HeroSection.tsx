@@ -1,7 +1,6 @@
 'use client';
 import { useEffect } from "react";
 import AOS from "aos";
-import GLightbox from "glightbox";
 import Image from "next/image";
 const HeroSection = () => {
     useEffect(() => {
@@ -17,9 +16,14 @@ const HeroSection = () => {
         /**
  * Initiate glightbox
  */
-        GLightbox({
-            selector: ".glightbox",
-        });
+        if (typeof window !== "undefined") {
+            import("glightbox").then((module) => {
+                const GLightbox = module.default;
+                GLightbox({
+                    selector: ".glightbox",
+                });
+            });
+        }
     }, [])
     return (
         <section id="hero" className="hero section dark-background">
