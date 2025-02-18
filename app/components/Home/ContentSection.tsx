@@ -17,8 +17,7 @@ const ContentSection = () => {
         <div className="container section-title" data-aos="fade-up">
             <h2>Contact</h2>
             <p>
-                Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-                consectetur velit
+                📍 Visit Us
             </p>
         </div>
 

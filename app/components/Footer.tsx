@@ -70,7 +70,7 @@ const Footer = () => {
             <div className="container copyright text-center mt-4">
                 <p>© <span>Copyright</span> <strong className="px-1 sitename">The Royal Orbit</strong> <span>All Rights Reserved</span></p>
                 <div className="credits">
-                    Designed by <Link href="https://github.com/OneSakib/">Sakib Malik</Link>
+                    Designed by <Link href="https://sakibmalik.vercel.app/">Sakib Malik</Link>
                 </div>
             </div>
 

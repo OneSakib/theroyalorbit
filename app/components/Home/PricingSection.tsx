@@ -15,100 +15,43 @@ const PricingSection = () => {
         <div className="container section-title" data-aos="fade-up">
             <h2>Pricing</h2>
             <p>
-                Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-                consectetur velit
+                Here are a few lines you can use to display the room price at The Royal Orbit:
             </p>
         </div>
 
         <div className="container">
             <div className="row gy-4">
-                <div className="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-                    <div className="pricing-item">
-                        <h3>Free Plan</h3>
-                        <h4><sup>$</sup>0<span> / month</span></h4>
-                        <ul>
-                            <li>
-                                <i className="bi bi-check"></i>
-                                <span>Quam adipiscing vitae proin</span>
-                            </li>
-                            <li>
-                                <i className="bi bi-check"></i>
-                                <span>Nec feugiat nisl pretium</span>
-                            </li>
-                            <li>
-                                <i className="bi bi-check"></i>
-                                <span>Nulla at volutpat diam uteera</span>
-                            </li>
-                            <li className="na">
-                                <i className="bi bi-x"></i>
-                                <span>Pharetra massa massa ultricies</span>
-                            </li>
-                            <li className="na">
-                                <i className="bi bi-x"></i>
-                                <span>Massa ultricies mi quis hendrerit</span>
-                            </li>
-                        </ul>
-                        <a href="#" className="buy-btn">Buy Now</a>
-                    </div>
-                </div>
-
                 <div className="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
                     <div className="pricing-item featured">
-                        <h3>Business Plan</h3>
-                        <h4><sup>$</sup>29<span> / month</span></h4>
+                        <h3>Booking</h3>
+                        <h4><sup>₹</sup>1200<span> / 24 Hour</span></h4>
                         <ul>
                             <li>
                                 <i className="bi bi-check"></i>
-                                <span>Quam adipiscing vitae proin</span>
+                                <span>Experience Luxury at The Royal Orbit! 🏨✨</span>
                             </li>
                             <li>
                                 <i className="bi bi-check"></i>
-                                <span>Nec feugiat nisl pretium</span>
+                                <span>Stay with us for just ₹1200 per night per room.</span>
                             </li>
                             <li>
                                 <i className="bi bi-check"></i>
-                                <span>Nulla at volutpat diam uteera</span>
+                                <span>Affordable Elegance at The Royal Orbit! 🌟</span>
                             </li>
                             <li>
                                 <i className="bi bi-check"></i>
-                                <span>Pharetra massa massa ultricies</span>
+                                <span>Book your stay now at just ₹1200 per room per night.</span>
                             </li>
                             <li>
                                 <i className="bi bi-check"></i>
-                                <span>Massa ultricies mi quis hendrerit</span>
+                                <span>Unmatched Comfort, Unbeatable Price! 🛏️</span>
+                            </li>
+                            <li>
+                                <i className="bi bi-check"></i>
+                                <span>Enjoy a luxurious stay at The Royal Orbit for only ₹1200 per night.</span>
                             </li>
                         </ul>
-                        <a href="#" className="buy-btn">Buy Now</a>
-                    </div>
-                </div>
-
-                <div className="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-                    <div className="pricing-item">
-                        <h3>Developer Plan</h3>
-                        <h4><sup>$</sup>49<span> / month</span></h4>
-                        <ul>
-                            <li>
-                                <i className="bi bi-check"></i>
-                                <span>Quam adipiscing vitae proin</span>
-                            </li>
-                            <li>
-                                <i className="bi bi-check"></i>
-                                <span>Nec feugiat nisl pretium</span>
-                            </li>
-                            <li>
-                                <i className="bi bi-check"></i>
-                                <span>Nulla at volutpat diam uteera</span>
-                            </li>
-                            <li>
-                                <i className="bi bi-check"></i>
-                                <span>Pharetra massa massa ultricies</span>
-                            </li>
-                            <li>
-                                <i className="bi bi-check"></i>
-                                <span>Massa ultricies mi quis hendrerit</span>
-                            </li>
-                        </ul>
-                        <a href="#" className="buy-btn">Buy Now</a>
+                        <a href="#contact" className="buy-btn">Book Now</a>
                     </div>
                 </div>
             </div>

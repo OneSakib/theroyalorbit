@@ -40,9 +40,7 @@ const FaqSection: React.FC = () => {
             <div className="container section-title" data-aos="fade-up">
                 <h2>Frequently Asked Questions</h2>
                 <p>
-                    Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-                    sit in iste officiis commodi quidem hic quas.
+                    Here are some Frequently Asked Questions (FAQs) for The Royal Orbit:
                 </p>
             </div>
 
@@ -76,24 +74,44 @@ const FaqSection: React.FC = () => {
 // FAQ Data for better maintainability
 const faqData = [
     {
-        question: "Non consectetur a erat nam at lectus urna duis?",
-        answer: "Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.",
+        question: "What is the price for a room per night?",
+        answer: "The price for a room at The Royal Orbit is ₹1200 per night.",
     },
     {
-        question: "Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?",
-        answer: "Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.",
+        question: "How can I book a room?",
+        answer: "You can book a room by:📞 Calling us at + 91 - 8865832516 or + 91 - 8923246999📍 Visiting us at Chabara Complex, Near Parsvnath Plaza, Court Road, Saharanpur, India 247001",
     },
     {
-        question: "Dolor sit amet consectetur adipiscing elit pellentesque?",
-        answer: "Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit.",
+        question: "What are the check-in and check-out timings?",
+        answer: "Check-in: 12AM Check-out: 12PM",
     },
     {
-        question: "Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?",
-        answer: "Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium.",
+        question: "Do you offer free Wi-Fi?",
+        answer: "Yes! We provide free high-speed Wi-Fi for all our guests.",
     },
     {
-        question: "Tempus quam pellentesque nec nam aliquam sem et tortor consequat?",
-        answer: "Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est.",
+        question: "Is breakfast included in the room price?",
+        answer: "No, breakfast is not included in the room price. Guests can also enjoy delicious meals at our in-house restaurant.",
+    },
+    {
+        question: "Do you provide parking facilities?",
+        answer: "Yes, we offer free parking for our guests.",
+    },
+    {
+        question: "Can I cancel or modify my booking?",
+        answer: "Yes, you can cancel or modify your booking. Please contact us at least [X hours/days] in advance for changes or cancellations.",
+    },
+    {
+        question: "Are pets allowed in the hotel?",
+        answer: "No, Pets are not allowed here.",
+    },
+    {
+        question: "Do you have banquet or event spaces?",
+        answer: "Yes, we offer event spaces for meetings, parties, and conferences. Contact us at +91-8865832516 for more details.",
+    },
+    {
+        question: "What safety measures do you have in place?",
+        answer: "We follow strict hygiene and safety protocols, including regular sanitization, contactless check-in, and 24/7 security.",
     },
 ];
 

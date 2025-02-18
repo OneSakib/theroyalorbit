@@ -18,7 +18,7 @@ const teamMembers: TeamMember[] = [
         name: "Ankush Tyagi",
         role: "Chief Executive Officer",
         description: "Explicabo voluptatem mollitia et repellat qui dolorum quasi",
-        imgSrc: "/assets/img/team/team-1.jpg",
+        imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStrlh16-6p2ldijcv8yGQWHKwk598Qv8JSyg&s",
         delay: 100,
     },
     {

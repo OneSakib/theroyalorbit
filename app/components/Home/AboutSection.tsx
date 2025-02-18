@@ -1,69 +1,65 @@
-'use client';
+"use client";
 
 import { useEffect } from "react";
 import Aos from "aos";
-const AboutSection = () => {
+import "aos/dist/aos.css"; // Import AOS styles
+
+const AboutSection: React.FC = () => {
     useEffect(() => {
-        function aosInit() {
-            Aos.init({
-                duration: 600,
-                easing: "ease-in-out",
-                once: true,
-                mirror: false,
-            });
-        }
-        aosInit();
-    }, [])
+        Aos.init({
+            duration: 600,
+            easing: "ease-in-out",
+            once: true,
+            mirror: false,
+        });
+    }, []);
 
-    return <section id="about" className="about section">
-        <div className="container section-title" data-aos="fade-up">
-            <h2>About Us</h2>
-        </div>
+    return (
+        <section id="about" className="about section">
+            <div className="container section-title" data-aos="fade-up">
+                <h2>About Us</h2>
+            </div>
 
-        <div className="container">
-            <div className="row gy-4">
-                <div
-                    className="col-lg-6 content"
-                    data-aos="fade-up"
-                    data-aos-delay="100"
-                >
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    <ul>
-                        <li>
-                            <i className="bi bi-check2-circle"></i>
-                            <span
-                            >Ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat.</span                            >
-                        </li>
-                        <li>
-                            <i className="bi bi-check2-circle"></i>
-                            <span
-                            >Duis aute irure dolor in reprehenderit in voluptate
-                                velit.</span                            >
-                        </li>
-                        <li>
-                            <i className="bi bi-check2-circle"></i>
-                            <span>Ullamco laboris nisi ut aliquip ex ea commodo</span>
-                        </li>
-                    </ul>
-                </div>
+            <div className="container">
+                <div className="row gy-4">
+                    <div
+                        className="col-lg-6 content"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+                        <p>Welcome to The Royal Orbit – Where Comfort Meets Luxury! 🌟</p>
+                        <p>
+                            Located in the heart of Saharanpur, The Royal Orbit offers a
+                            perfect blend of elegance, comfort, and affordability. Whether
+                            you&apos;re traveling for business or leisure, our well-furnished
+                            rooms, top-notch amenities, and warm hospitality ensure a
+                            memorable stay.
+                        </p>
+                        <ul>
+                            {[
+                                "Spacious & Comfortable Rooms.",
+                                "Affordable Rates – Just ₹1200 per night.",
+                                "Free Wi-Fi & Parking.",
+                                "24/7 Customer Support.",
+                                "Convenient Location – Chabara Complex, Near Parsvnath Plaza, Court Road, Saharanpur, India 247001.",
+                            ].map((item, index) => (
+                                <li key={index}>
+                                    <i className="bi bi-check2-circle"></i>
+                                    <span>{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
 
-                <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                    <p>
-                        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum
-                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                        cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.
-                    </p>
-                    <a href="#" className="read-more"
-                    ><span>Read More</span><i className="bi bi-arrow-right"></i                    ></a>
+                    <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <p>📞 Call us now to book your stay!</p>
+                        <span>+91-8865832516 | +91-8923246999</span>
+                        <p>Experience hospitality at its finest – The Royal Orbit awaits you! ✨🏨</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-}
+        </section>
+    );
+};
+
 export default AboutSection;

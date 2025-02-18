@@ -10,6 +10,7 @@ import TeamSection from "./components/Home/TeamSection";
 import PricingSection from "./components/Home/PricingSection";
 import TestimonialSection from "./components/Home/TestimonialSection";
 import FaqSection from "./components/Home/FaqSection";
+import WhatsAppButton from "./components/WhatsAppButton";
 import ContentSection from "./components/Home/ContentSection";
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <PricingSection />
       <TestimonialSection />
       <FaqSection />
+      <WhatsAppButton />
       <ContentSection />
     </main>
   );
