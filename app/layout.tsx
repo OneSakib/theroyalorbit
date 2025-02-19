@@ -26,6 +26,42 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "The Royal Orbit",
   description: "The Royal Orbit Home Stay",
+  keywords: [
+    "Hotel in Saharanpur",
+    "The Royal Orbit",
+    "Affordable hotel rooms",
+    "Luxury hotel Saharanpur",
+    "Best hotel near Court Road",
+    "Hotel booking in Saharanpur",
+    "Rooms with free Wi-Fi",
+    "Hotel with parking Saharanpur",
+  ],
+  openGraph: {
+    title: "The Royal Orbit - Best Hotel in Saharanpur",
+    description:
+      "Experience comfort and luxury at The Royal Orbit. Stay in spacious rooms with top-class amenities at an affordable price.",
+    url: "https://theroyalorbit.vercel.app/",
+    siteName: "The Royal Orbit",
+    images: [
+      {
+        url: "https://theroyalorbit.vercel.app/cover-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "The Royal Orbit Hotel",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Royal Orbit - Best Hotel in Saharanpur",
+    description:
+      "Looking for a comfortable stay in Saharanpur? Book your room at The Royal Orbit now!",
+    images: ["https://theroyalorbit.vercel.app/cover-image.jpg"],
+  },
+  other: {
+    "google-site-verification": "4CtgfbAuMg1urFFuIhPyB26dKp1Y9pvbZ6oSgHUrTTs"
+  }
 };
 
 export default function RootLayout({
