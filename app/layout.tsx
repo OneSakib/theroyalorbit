@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     images: ["https://theroyalorbit.vercel.app/cover-image.jpg"],
   },
   other: {
-    "google-site-verification": "4CtgfbAuMg1urFFuIhPyB26dKp1Y9pvbZ6oSgHUrTTs"
+    "google-site-verification": "3fBWM1HmnoFQLD6S61nNMRT1bQ7NJ_2mas2oITm5D5g"
   }
 };
 
