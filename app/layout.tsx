@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
+import { Analytics } from '@vercel/analytics/next';
 // css files
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./assets/vendor/bootstrap-icons/bootstrap-icons.css"
@@ -76,6 +77,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Analytics />
         <Footer />
         <Loader />
 
